@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1F55D4" />
+    <meta
+      name="description"
+      content="Boma Systems: rental and property management for agencies. Properties, tenants, payments, quotations and reports in one place."
+    />
+
+    <!-- Logo used as the browser tab icon and the home-screen icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/dj6wdsbtx/image/upload/w_64,h_64,c_pad,b_white/v1793620906/Boma_Systems_Logo_with_House_Emblem_y3wr9j.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://res.cloudinary.com/dj6wdsbtx/image/upload/w_180,h_180,c_pad,b_white/v1793620906/Boma_Systems_Logo_with_House_Emblem_y3wr9j.png"
+    />
+
+    <!-- Social previews -->
+    <meta property="og:title" content="Boma Systems" />
+    <meta property="og:description" content="Rental and property management for agencies." />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dj6wdsbtx/image/upload/v1793620906/Boma_Systems_Logo_with_House_Emblem_y3wr9j.png"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Inter, the font used across the app -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+
+    <title>Boma Systems</title>
+
+    <style>
+      html, body { margin: 0; height: 100%; }
+      body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; background: #F3F6FB; }
+      body.dark { background: #0F1623; }
+      /* Shown only until React mounts, then replaced automatically */
+      #boot { height: 100vh; height: 100dvh; display: flex; align-items: center; justify-content: center; }
+      #boot img {
+        width: 96px; height: 96px; object-fit: contain; background: #fff;
+        border-radius: 20px; padding: 10px; animation: boot-pulse 1.5s ease-in-out infinite;
+      }
+      @keyframes boot-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+      @media (prefers-reduced-motion: reduce) { #boot img { animation: none; } }
+    </style>
+    <script>
+      // Match the saved theme before React loads, to avoid a white flash in dark mode
+      try { if (JSON.parse(localStorage.getItem("boma.dark"))) document.documentElement.classList.add("dark-boot"); } catch (e) {}
+    </script>
+    <style>
+      html.dark-boot body { background: #0F1623; }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run Boma Systems.</noscript>
+    <div id="root">
+      <div id="boot">
+        <img
+          src="https://res.cloudinary.com/dj6wdsbtx/image/upload/v1793620906/Boma_Systems_Logo_with_House_Emblem_y3wr9j.png"
+          alt="Boma Systems"
+        />
+      </div>
+    </div>
+  </body>
+</html>
